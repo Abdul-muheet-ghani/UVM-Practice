@@ -1,0 +1,8 @@
+data types are two types the first is variable which behave as a register and always assign in always block i.e
+always@(posedge clk)    value <= a;
+ 
+the second type of data is net which is not define in always block because it's the wire between the two module so its value is change instant when the input changes
+
+there are four logic in logic data type 1,0,x,z; its more appropriate to find some bugs in the system
+
+also there are two bits in bit data type 1,0 so it is not an appropriate for debugging some x signal
