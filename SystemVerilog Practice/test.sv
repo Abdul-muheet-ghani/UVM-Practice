@@ -3,8 +3,9 @@
 // $value$plusargs use to get the value from command line and assign it to any variable
 
 // Testbench
+typedef bit [1:0] user_define_type;   //User define data type which is globally define 
 module test;
-	bit a;
+	user_define_type a;               //Recalling
   task write_data;
     begin
       if (a == 1) begin
