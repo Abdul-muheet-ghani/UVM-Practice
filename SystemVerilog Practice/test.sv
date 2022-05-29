@@ -1,4 +1,3 @@
-// Testbench
 // $test$plusargs is used for controlling simulation through command line
 // Avoid the recompilation of testbench
 // $value$plusargs use to get the value from command line and assign it to any variable
