@@ -1,6 +1,6 @@
 module enum_tb;
   
-  enum{start=5,address,data,stop} packet;
+  enum{start=5,address[4],data,stop} packet;                              //start = 5 starting value then increment sequntially and address[4] means there are 4 addresses like address1,address2,address3,address4 so there are 7 element in this enum
   
   initial begin
     packet = start;                                                       //for getting value of enum 
