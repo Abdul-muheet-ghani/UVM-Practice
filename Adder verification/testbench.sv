@@ -6,7 +6,7 @@ module testbench;
     intf pif();
     test tb(pif);
 
-    full_adder(
+    full_adder t(
         .a(pif.a),
         .b(pif.b),
         .cin(pif.cin),
@@ -15,6 +15,7 @@ module testbench;
     );
     
     initial begin
+//      $display("input from test a=%b,b=%b,cin=%b",pif.a,pif.b,pif.cin);
         $dumpfile("dump.vcd");
         $dumpvars(1);
     end
