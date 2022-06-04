@@ -3,7 +3,8 @@
 program test;
     environment env;
 
-    initial begin
+    function new(intf in);
         env = new();
-    end
+        
+    endfunction
 endprogram
