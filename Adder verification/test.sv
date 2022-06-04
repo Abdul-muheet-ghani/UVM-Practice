@@ -1,10 +1,10 @@
 `include "environment.sv"
 
-program test;
+program test(intf in);
     environment env;
 
-    function new(intf in);
-        env = new();
-        
-    endfunction
+    initial begin
+        env = new(in);
+      env.run();
+    end
 endprogram
