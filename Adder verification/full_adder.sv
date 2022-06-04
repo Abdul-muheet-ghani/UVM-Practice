@@ -1,9 +1,9 @@
 module full_adder (
-    input [4:0]a;
-    input [4:0]b;
-    input [4:0]cin;
-    output [4:0]sum;
-    output [4:0]carry;
+  input a,
+  input b,
+  input cin,
+  output sum,
+  output carry
 
 );
 
