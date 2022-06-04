@@ -7,16 +7,19 @@ class generator;
         this.mbx = mbx;
     endfunction //new()
 
-    task automatic run();
+    task run();
     begin
+      repeat(9) begin
         tr = new();
-        tr.a = 1;
-        tr.b = 1;
-        tr.cin = 0;
+        tr.randomize();
+       // tr.a = 1;
+       // tr.b = 1;
+       // tr.cin = 0;
 
-        $$display("Transaction a=%b,b=%b,cin=%b",tr.a,tr.b,tr.cin);
+      $display("Input Transaction a=%b,b=%b,cin=%b",tr.a,tr.b,tr.cin);
 
         mbx.put(tr);
+      end
 
     end
     endtask //automatic
