@@ -14,7 +14,7 @@ class environment;
         this.intf = intf;
         mbx = new();
         gen = new(mbx);
-        drv = new(intf,mbox);
+        drv = new(intf,mbx);
 
     endfunction //new()
 
