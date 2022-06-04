@@ -1,6 +1,6 @@
-`include "transaction"
-`include "generator"
-`include "driver"
+`include "transaction.sv"
+`include "generator.sv"
+`include "driver.sv"
 
 class environment;
 
