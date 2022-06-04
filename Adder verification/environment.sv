@@ -7,18 +7,18 @@ class environment;
     generator gen;
     driver drv;
     mailbox mbx;
-    virtual interface intf;
+    virtual intf vif;
 
-    function new(virtual interface intf);
+  function new(virtual intf vif);
 
-        this.intf = intf;
+        this.vif = vif;
         mbx = new();
         gen = new(mbx);
-        drv = new(intf,mbx);
+      drv = new(vif,mbx);
 
     endfunction //new()
 
-    task automatic run();
+    task run();
         fork
             gen.run();
             drv.run();
