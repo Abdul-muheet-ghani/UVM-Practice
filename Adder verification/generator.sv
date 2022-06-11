@@ -4,7 +4,7 @@ class generator;
     mailbox mbx;
 
     function new(mailbox mbx);
-        this.mbx = mbx;
+        this.mbx = mbx;        //class has global variable mbx and function new arguement mbx is local so initialize the local arguement value to the global variable of the same name "mbx" we use "this."
     endfunction //new()
 
     task run();
