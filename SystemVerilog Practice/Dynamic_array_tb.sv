@@ -4,7 +4,7 @@ module tb;
   int w_d[100];          //initialize fixed array of size 100
   
   initial begin
-    $display(x_d.size());  //display 0
+    $display(x_d.size());  //display 0 x_d.size display the size of queue
     x_d = y_d;
 
     $display(x_d.size());  //display 3
