@@ -12,7 +12,7 @@ endclass //randomization
 module randomize_class_module ;
 
     randomization ran_h;
-    int count[int] = '{default:0};
+    int count[int] = '{default:0};                    //integer value is save in count variable
     initial begin
         ran_h = new();
         repeat(10) begin
