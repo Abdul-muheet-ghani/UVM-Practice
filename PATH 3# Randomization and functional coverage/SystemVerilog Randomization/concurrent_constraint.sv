@@ -8,7 +8,6 @@ class concurrent;
       x<5;
       x+y == z;             //run concurrently
         }
-        
 endclass //randomization
 
 module randomize_class_module ;

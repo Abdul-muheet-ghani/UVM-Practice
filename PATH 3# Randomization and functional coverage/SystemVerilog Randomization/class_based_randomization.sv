@@ -6,13 +6,12 @@ class randomization;
     constraint dice_value{
       dice inside {[1:6]};     //constraint uses inside operator for range
         }
-        
 endclass //randomization
 
 module randomize_class_module ;
 
     randomization ran_h;
-    int count[int] = '{default:0};                    //integer value is save in count variable
+    int count[int] = '{default:0};
     initial begin
         ran_h = new();
         repeat(10) begin
