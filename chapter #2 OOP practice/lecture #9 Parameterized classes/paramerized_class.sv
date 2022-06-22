@@ -1,3 +1,4 @@
+//vector v4_t is type_defined constructor
 class vector #(parameter t);
 
     bit [t-1:0] para;
