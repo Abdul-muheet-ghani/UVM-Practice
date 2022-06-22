@@ -1,7 +1,6 @@
 class randomization;
 
-    
-  rand bit [2:0] dice;    //for randomization
+    rand bit [2:0] dice;    //for randomization
     bit [2:0] variable;
 
     constraint dice_value{
