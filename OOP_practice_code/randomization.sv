@@ -6,7 +6,7 @@ class random;
   constraint c1{                 //in constraint we will define boundary so a is in between 2 to 10 
     a>2 && a<10;
     b>6 && b<15;
-    d>1 && d<9;
+    d>1 && d<9;                  // constraints range
   }
 endclass
 
