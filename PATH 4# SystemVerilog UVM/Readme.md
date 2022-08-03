@@ -97,3 +97,5 @@ these stages needs to be synchronized with all the component this means that not
 The testbench component are drive from the common base class. these base class define empty virtual methods for these different stages of the design for `virtual function for construction`, `virtual tasks for Run_time_task`,`virtual function for Clean-up`. then each component override the methods which are necessary for specific component by using this method synchronizing is maintain in same order for every component 
 
 ![image](https://user-images.githubusercontent.com/81433387/182699145-1d385adb-5666-4fba-b069-2f4d1a2759a7.png)
+![image](https://user-images.githubusercontent.com/81433387/182699950-f010f33a-df63-409a-ab00-a4fa95d477c7.png)
+
