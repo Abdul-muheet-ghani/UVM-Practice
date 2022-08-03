@@ -28,4 +28,20 @@ A class contain a refrence to another class for example drived class and this me
 building object by calling new() function
 
 - ### OOP Heirarchy
-relationship between drive and base class is called *is-a* process
+relationship between drive and base class is called *is-a* process. and this property of OOP heirarchy is inheritance type
+
+
+## Some terminologies are from UVM
+
+- ### Create
+Create is a method to contruct an object indirectly from UVM factory pattern instead of calling new()
+
+- ### Transaction
+Transaction of data is destoyed and generated every point in stimulus 
+
+- ### Component
+Component is the component of envoronment like driver,monitor
+
+- ### UVM Heirarchy
+this is the heirarchy of UVM like Test has an environment and environment has an agent
+
