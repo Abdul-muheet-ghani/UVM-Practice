@@ -66,3 +66,10 @@ UVM stand  for universal verification methodologies. an industrial verification 
 
 ![image](https://user-images.githubusercontent.com/81433387/182689947-18d78233-4c31-42a6-b63b-32be0a49455b.png)
 
+The upper test class is for build and configure the environment and generate the stimulus and the test class you can determine how many time we run the particular stimulus, what typy of transaction and what is the version of particular component
+
+The Envirinment class instantes the component for driving transaction to DUT. Monitoring value from DUT and checking value as well 
+
+The design under test communicate through system verilog interface that has different methods for driving transaction to DUT and get the result from it.
+
+all of these component are constructed under the base class called uvm_root
