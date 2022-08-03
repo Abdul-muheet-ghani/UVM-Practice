@@ -75,3 +75,23 @@ The design under test communicate through system verilog interface that has diff
 all of these component are constructed under the base class called uvm_root
 
 ![image](https://user-images.githubusercontent.com/81433387/182692897-b0044f90-52af-4232-bb41-84d7ac0c8ae2.png)
+
+
+- # Verification Phases
+
+Any class based Verification has three phases 
+- ### Construction
+
+  * where the component is connected congigured and constructed
+
+- ### Run Time Task 
+  * Simulation time is consumed, sending and recieving the transaction
+
+- ### Clean-up stage
+  * Results is collected verified and final report are generated
+
+these stages needs to be synchronized with all the component this means that not any stage are completed while previous stage are in construction stage
+
+`How this approach implemented??`
+
+The testbench component are drive from the common base class. these base class define empty virtual methods for these different stages of the design for `virtual function for construction`, `virtual tasks for Run_time_task`,`virtual function for Clean-up`. then each component override the methods which are necessary for specific component by using this method synchronizing is maintain in same order for every component    
