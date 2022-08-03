@@ -1,19 +1,31 @@
 ## The first terminologies are from OOP
 
-### Class
+- ### Class
 contains related feature and functionality, it contain variable and routines etc.
 
-### Properties
+- ### Properties
 Variable in a class 
 
-### Method
+- ### Method
 Task or function in a class
 
-### Members
+- ### Members
 Methods and Properties in a class
 
-### Object
+- ### Object
 Object is an instance of class which will be instantiated the class 
 
-### Handle
+- ### Handle
 handle is pointer which point the value of arguement to property of class i.e *this.name*
+
+- ### Encapsulation
+when class contain properties and method for itself or operate on them
+
+- ### Agrregation/Composition
+A class contain a refrence to another class for example drived class and this method uses the *has-a* relationship
+
+- ### Construct
+building object by calling new() function
+
+- ### OOP Heirarchy
+relationship between drive and base class is called *is-a* process
