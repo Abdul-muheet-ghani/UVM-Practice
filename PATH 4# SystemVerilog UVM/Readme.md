@@ -73,3 +73,5 @@ The Envirinment class instantes the component for driving transaction to DUT. Mo
 The design under test communicate through system verilog interface that has different methods for driving transaction to DUT and get the result from it.
 
 all of these component are constructed under the base class called uvm_root
+
+![image](https://user-images.githubusercontent.com/81433387/182692897-b0044f90-52af-4232-bb41-84d7ac0c8ae2.png)
