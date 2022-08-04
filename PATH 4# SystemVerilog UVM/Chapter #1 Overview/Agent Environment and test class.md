@@ -33,3 +33,19 @@ class tx_agent extends uvm_agent;
     endfunction
 endclass
 ```
+# UVM Environment
+```
+class tx_env extends uvm_env;
+    `uvm_component_utils(tx_env);
+    function new()
+        sup...
+    endfunction 
+
+    tx_agent agt;
+    function build phase as same as agent
+endclass
+```
+
+# Test Class
+test class has environment and a sequence build phase and run phase 
+
