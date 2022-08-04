@@ -92,3 +92,44 @@ class tx_driver extends uvm_driver #(tx_item);
 
 endclass
 ```
+
+- ## Generating Stimulus
+how to generate stimulus with UVM the question is how sequencer generate transaction. the answer is that sequencer recieve the transaction from the 1 or more sequences. so we have to differentiate between the sequences which is the object which contain a task for generating stimulus. and sequencer which controll the seq_item transaction which generate the uvm sequence. so sequence is not an heirarchy component it's an object. which tranmist transaction through the `TLM transfer level modeling` to sequencer
+### Body
+sequence is the code of procedural block that has been wrapped in a method call body
+
+``` 
+tx = tx_item::type_id::create("tx");
+```
+body task create a transaction using factory creation then 
+```
+start_item(tx);
+```
+wait for the driver to be ready at that point  
+```
+if(!tx.randomize());
+```
+randomize it 
+```
+finish_item(tx);
+```
+send the transaction and wait for the response of the driver to know the driver is ready again and then send the new transaction.
+
+```
+class tx_sequence extends uvm_sequence #(tx_iten);
+    `uvm_object_utils(tx_sequence);
+    function new(string name = "tx_sequence");
+        super.new(name);
+    endfunction
+
+    virtual task body ();
+        tx_item tx;
+        repeat (5) begin
+            tx = tx_item::type_id::create("tx");
+            start_item(tx);
+            if(!tx.randomize()); `uvm_fatal...
+            finish_item(tx);
+        end
+    endtask
+endclass
+```
