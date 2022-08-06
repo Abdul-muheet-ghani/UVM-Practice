@@ -1,4 +1,5 @@
 ## Advance OOP terminology
+
 ***is-a*** and ***has-a***
 
 if class is extend from its base or parent class it has inheritance property so this used as *is-an*. A bird is an animal. bird is drived class of animal
