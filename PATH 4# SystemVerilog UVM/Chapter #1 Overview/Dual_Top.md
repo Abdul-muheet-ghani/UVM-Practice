@@ -1,0 +1,2 @@
+# Connecting DUT with Testbench
+Mentor recommended the dual to for easier migration evaluation for that we can easily speed up our smulation speed by divide the design into two part the first is software model and other is hardware emulated model
