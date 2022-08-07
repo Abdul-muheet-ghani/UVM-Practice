@@ -22,3 +22,5 @@ class tx_item extends uvm_sequence_item()
     rand tx_payload pay_h; 
 endclass
 ```
+
+![image](https://user-images.githubusercontent.com/81433387/183269880-046a2b0c-dc5f-498f-8fe9-fb6ca7cf6323.png)
