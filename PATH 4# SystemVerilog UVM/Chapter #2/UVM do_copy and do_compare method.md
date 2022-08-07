@@ -47,7 +47,8 @@ class tx_item extends uvm_sequence_item;
 endclass
 ```
 
-# 
+# The do_compare Metho
+do_compare method also used in scoerboard and other component
 
 
 
