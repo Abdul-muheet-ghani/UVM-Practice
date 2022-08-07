@@ -16,3 +16,5 @@ For example scoreboard compare an expected value and actual value
 - `pack-byte()`:
 - `unpack()`:extract transaction property from concatenated pack array of bits
 - `unpack-bytes()`:
+
+![image](https://user-images.githubusercontent.com/81433387/183269583-8ba3fa7b-27d6-45de-80e1-eaab61fcabdc.png)
