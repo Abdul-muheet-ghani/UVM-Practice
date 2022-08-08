@@ -18,4 +18,7 @@ endclass                        |               transfer(tx);   |       endtask
 
 so the driver is initiator of the transfer, and generator is the target for transfer
 > Problem: the connection hard-coded class names and a fixed topology
+
 > Solution: Add the layer between the two components 
+
+![image](https://user-images.githubusercontent.com/81433387/183367711-a1f5532d-60d3-4ad3-ac16-791916ac414c.png)
