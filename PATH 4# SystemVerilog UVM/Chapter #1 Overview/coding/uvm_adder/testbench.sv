@@ -1,5 +1,12 @@
+/*******************************************
+This is a basic UVM "Hello World" testbench.
+
+Explanation of this testbench on YouTube:
+https://www.youtube.com/watch?v=Qn6SvG-Kya0
+*******************************************/
+
 `include "uvm_macros.svh"
-`include "test_bench_pkg.svh"
+`include "my_testbench_pkg.svh"
 
 // The top module that contains the DUT and interface.
 // This module starts the test.
@@ -8,10 +15,10 @@ module top;
   import my_testbench_pkg::*;
   
   // Instantiate the interface
-  dut_int dut_if1();
+  dut_if dut_if1();
   
   // Instantiate the DUT and connect it to the interface
-  dut dut1(.inter(dut_if1));
+  dut dut1(.dif(dut_if1));
   
   // Clock generator
   initial begin
@@ -23,7 +30,7 @@ module top;
     // Place the interface into the UVM configuration database
     uvm_config_db#(virtual dut_if)::set(null, "*", "dut_vif", dut_if1);
     // Start the test
-    run_test("tx_test");
+    run_test("my_test");
   end
   
   // Dump waves
