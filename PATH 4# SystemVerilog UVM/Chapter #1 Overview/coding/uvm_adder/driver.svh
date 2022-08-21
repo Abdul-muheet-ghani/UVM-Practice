@@ -1,14 +1,19 @@
-class tx_driver extends uvm_driver#(tx_sequence);
+
+
+
+
+
+class tx_driver extends uvm_driver #(tx_sequence);
     `uvm_component_utils(tx_driver)
+  
+   virtual dut_int vdut_int;
     function new(string name, uvm_component parent);
       super.new(name,parent);
     endfunction
     
-    virtual interface dut_int vdut_int;
-    
       function void build_phase(uvm_phase phase);
       // Get interface reference from config database
-        if(!uvm_config_db#(virtual dut_int)::get(this, "", "dut_vif", dut_vif)) begin
+        if(!uvm_config_db#(virtual dut_int)::get(this, "", "dut_vif", vdut_int)) begin
         `uvm_error("", "uvm_config_db::get failed")
       end
     endfunction

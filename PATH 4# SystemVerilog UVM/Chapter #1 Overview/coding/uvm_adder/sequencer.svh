@@ -1,3 +1,7 @@
+
+
+
+
 class tx_sequence extends uvm_sequence_item;
     `uvm_object_utils(tx_sequence)
     
@@ -18,12 +22,12 @@ class tx_sequence extends uvm_sequence_item;
       super.new(name,parent);
     endfunction
         
-    virtual task body
-      repeat (8)begin
+    virtual task body;
+      repeat (8) begin
         req = tx_sequence::type_id::create("req");
         start_item(req);
-        if(!req.randomize)begin
-          `uvm_error("tx_sequence","failed radomization);
+        if(!req.randomize())begin
+          `uvm_error("tx_sequence","failed radomization");
         end
         finish_item(req);
       end
