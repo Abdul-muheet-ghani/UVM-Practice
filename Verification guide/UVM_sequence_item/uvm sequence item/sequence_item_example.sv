@@ -29,6 +29,10 @@ module test;
 
         //print seq item
         seq.print();
+    //    -----------------------------------------
+    //    sequence_item  sequence_item  -     @334 
+    //      a            integral       8     'h24 
+    //    -----------------------------------------
     end
     end
 endmodule
