@@ -70,20 +70,20 @@ class uvm_agnt extends uvm_agent;
     driver_seq drv;
 
     function void build_phase(uvm_phase phase);
-        sqr = uvm_sequencer#(sequence_item)::type_id::create("sqr",this);
+        sqr = uvm_sequencer#(sequence_item)::type_id::create("sqr",this);//create the object of sequencer
         drv = driver_seq::type_id::create("drv",this);
     endfunction
 
     function void connect_phase(uvm_phase phase);
-        drv.seq_item_port.connect(sqr.seq_item_export);
+        drv.seq_item_port.connect(sqr.seq_item_export);                //TLM connection driver to parent of uvm_sequencer
     endfunction
 
     task run_phase (uvm_phase phase);
       phase.raise_objection(this);
       begin
-        sequencer sq;
-        sq = sequencer::type_id::create("sq");
-        sq.start(sqr);
+        sequencer sq;                                                  //sequencer instance
+        sq = sequencer::type_id::create("sq");                         //create copy and clone
+        sq.start(sqr);                                                 //start the phases like, create, w8 for grant, randomize and other
       end
       phase.drop_objection(this);
     endtask
@@ -96,7 +96,7 @@ module test;
     //uvm_agnt agnt;
     initial begin
       $display("end=================");
-      run_test("uvm_agnt");
+      run_test("uvm_agnt");                                             //class agent run
       $display("end");
     end
 endmodule
