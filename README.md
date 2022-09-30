@@ -1,4 +1,4 @@
 ## UVM-Practice 
 ### Mentor Graphics
-This repository containing the practice code from beginning related to UVM chapter wise
+This repository containing the practice code from beginning related to UVM chapter wise.
 
