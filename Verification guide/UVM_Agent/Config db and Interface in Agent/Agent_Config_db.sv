@@ -1,4 +1,10 @@
+interface itfc ();
 
+    logic cmd;
+    logic [7:0] addr;
+    logic [7:0] data;
+
+endinterface
 
 class my_transaction extends uvm_sequence_item;
 
